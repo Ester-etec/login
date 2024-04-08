@@ -2,16 +2,16 @@ import { StatusBar } from 'expo-status-bar';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 import auth from '@react-native-firebase/auth';
 
-export default function Acesso({navigation}) {
 
-  const [initializing, setInitializing] = useState(true);
+export default function Cadastro({navigation}) {
+
+    const [initializing, setInitializing] = useState(true);
 
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
 
-  function login(){
-
-    auth().signInWithEmailAndPassword(email, senha)
+  function cadastrar(){
+    auth().createUserWithEmailAndPassword(email,senha)
     .then(userCredential => {console.log('user: ', userCredential);});
   }
 
@@ -31,9 +31,9 @@ return(
         />
     
         <TouchableOpacity style={styles.botao}
-        onPress={login}
+        onPress={cadastrar}
         >
-            <Text>Entrar</Text>
+            <Text>Cadastrar</Text>
         </TouchableOpacity>
         <StatusBar style="auto" />
     
