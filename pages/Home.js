@@ -1,6 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
-import auth from '@react-native-firebase/auth';
 import React, {useEffect,useState} from 'react';
 import auth from '@react-native-firebase/auth';
 

@@ -14,15 +14,17 @@ const Rotas = () => {
 
     useEffect(() => {
         const unsubscribe = auth().onAuthStateChanged(_user => {
-            setUser(_user);
             if(initializing) {
                 setInitializing(false);
             }
+            setUser(_user);
         });
 
         return unsubscribe;
 
-    }, []);
+    }, [initializing]);
+
+    if (initializing){
 
     return(
         <Stack.Navigator>
@@ -30,6 +32,13 @@ const Rotas = () => {
 
         </Stack.Navigator>
     );
+}
+
+return (
+    <SafeAreaView style={{flex: 1}}>
+      {user ? <HomeScreen /> : <SignInScreen />}
+    </SafeAreaView>
+  );
 
 }
 
