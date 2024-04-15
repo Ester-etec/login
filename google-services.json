@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "396161082390",
+    "project_id": "usersmatecar",
+    "storage_bucket": "usersmatecar.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:396161082390:android:fe5d46af8f8b4895ee4137",
+        "android_client_info": {
+          "package_name": "com.smatecar.smatecar"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDntVRECLQ0TxUfDL0T9IWRTcLVdxGnLVc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

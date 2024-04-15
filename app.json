@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "login",
-    "slug": "login",
+    "name": "smatecar",
+    "slug": "smatecar",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -17,15 +17,16 @@
     "ios": {
       "supportsTablet": true,
       "googleServicesFile": "./GoogleService-Info.plist",
-      "bundleIdentifier": "com.mycorp.myapp"
+      "bundleIdentifier": "com.smatecar.smatecar",
+      "useFrameworks":"static"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff",
-        "googleServicesFile": "./google-services.json",
-        "package": "com.mycorp.myapp"
-      }
+        "googleServicesFile": "./google-services.json"
+      },
+      "package": "com.smatecar.smatecar"
     },
     "web": {
       "favicon": "./assets/favicon.png"
