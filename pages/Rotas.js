@@ -3,6 +3,7 @@ import React, {useEffect,useState} from 'react';
 import auth, {FirebaseAuthTypes} from '@react-native-firebase/auth';
 import {ActivityIndicator, SafeAreaView, View} from 'react-native';
 
+
 import Acesso from './Login';
 import Cadastro from './CadastroI';
 import Home from './Home';
