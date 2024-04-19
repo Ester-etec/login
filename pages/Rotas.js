@@ -1,6 +1,7 @@
 import {createStackNavigator} from '@react-navigation/stack';
 import React, {useEffect,useState} from 'react';
 import auth, {FirebaseAuthTypes} from '@react-native-firebase/auth';
+import {ActivityIndicator, SafeAreaView, View} from 'react-native';
 
 import Acesso from './Login';
 import Cadastro from './CadastroI';
@@ -27,20 +28,19 @@ const Rotas = () => {
     if (initializing){
 
     return(
-        <Stack.Navigator>
-            <Stack.Screen name="Acesso" component={Acesso}/>
-
-        </Stack.Navigator>
+        <View>
+        <ActivityIndicator color={colors.primary} />
+      </View>
     );
 }
 
 return (
     <SafeAreaView style={{flex: 1}}>
-      {user ? <HomeScreen /> : <SignInScreen />}
+      {user ? <Home /> : <Cadastro />}
     </SafeAreaView>
   );
 
-}
+};
 
 
 

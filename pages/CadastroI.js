@@ -11,8 +11,22 @@ export default function Cadastro({navigation}) {
   const [senha, setSenha] = useState('');
 
   function cadastrar(){
-    auth().createUserWithEmailAndPassword(email,senha)
-    .then(userCredential => {console.log('user: ', userCredential);});
+    auth()
+    .createUserWithEmailAndPassword(email, senha)
+    .then(() => {
+      console.log('User account created & signed in!');
+    })
+    .catch(error => {
+      if (error.code === 'auth/email-already-in-use') {
+        console.log('Este email já está em uso!');
+      }
+
+      if (error.code === 'auth/invalid-email') {
+        console.log('Este email é inválido!');
+      }
+
+      console.error(error);
+    });
   }
 
 return(

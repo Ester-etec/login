@@ -11,8 +11,14 @@ export default function Acesso({navigation}) {
 
   function login(){
 
-    auth().signInWithEmailAndPassword(email, senha)
-    .then(userCredential => {console.log('user: ', userCredential);});
+    auth()
+      .signInWithEmailAndPassword(email, password)
+      .then(() => {
+        console.log('user is authenticated');
+      })
+      .catch(error => {
+        console.error(error);
+      });
   }
 
 return(
